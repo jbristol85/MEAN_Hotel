@@ -1,0 +1,30 @@
+{
+  "name": "mean_hotel",
+  "version": "1.0.0",
+  "description": "Udemy MEAN stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbristol85/MEAN_Hotel.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "Josh Bristol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbristol85/MEAN_Hotel/issues"
+  },
+  "homepage": "https://github.com/jbristol85/MEAN_Hotel#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  }
+}
