@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/jbristol85/MEAN_Hotel#readme",
   "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongodb": "^3.0.2",
