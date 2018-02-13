@@ -21,7 +21,7 @@ Your name: <input type="text" name="name" required ng-minlength="2" ng-model="vm
     <p>Name should be more then 2 characters long</p>
 </div>
 
-Your Rating: <input type="text" name="rating" required ng-pattern="/^[1-5]$/" ng-model="vm.rating"/>
+Your Rating: <input type="number" name="rating" required ng-pattern="/^[1-5]$/" ng-model="vm.rating"/>
 <div ng-show="vm.reviewForm.rating.$dirty && vm.reviewForm.rating.$invalid && vm.isSubmitted">
     <p>Rating must be between 1-5.</p>
 </div>
