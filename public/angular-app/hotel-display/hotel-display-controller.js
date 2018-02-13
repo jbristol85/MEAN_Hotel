@@ -9,6 +9,7 @@ function HotelController ($route, $routeParams, hotelDataFactory){
 	hotelDataFactory.hotelDisplay(id).then(function(response){
 		// console.log(response);
 		vm.hotel = response.data;
+		// console.log(vm.hotel)
 		vm.stars = _getStarRating(response.data.stars);
 		// console.log(vm.stars)
 	});
@@ -25,7 +26,7 @@ function HotelController ($route, $routeParams, hotelDataFactory){
 		};
 		if(vm.reviewForm.$valid){
 			hotelDataFactory.postReview(id, postData).then(function(response){
-				console.log(response.status);
+				console.log(response);
 				if(response.status === 201){
 					$route.reload();
 				}
