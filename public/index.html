@@ -5,17 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="css/superhero.css">
-	
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<link rel='stylesheet' href='css/bootstrap.css'>
+	<!--<link rel="stylesheet" href="css/superhero.css">-->
+
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Mean Hotel</title>
 </head>
 
 <body>
 
-	<div ng-view></div>
+	<mh-navigation></mh-navigation>
+	<div class="container">
+		<div ng-view></div>
+	</div>
 
 	<footer class="footer">
 		<div class="container">
@@ -25,16 +28,24 @@
 			<p class="text-center"><small>&copy; 2018 Josh Bristol</small></p>
 		</div>
 	</footer>
+	
+	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="node_modules/angular/angular.js"></script>
 	<script src="node_modules/angular-route/angular-route.js"></script>
+	<script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
 	<script src="angular-app/app.js"></script>
 	<script src="angular-app/hotel-list/hotel-list-controller.js"></script>
 	<script src='angular-app/hotel-display/hotel-display-controller.js'></script>
 	<script src="angular-app/hotel-data-factory/hotel-data-factory.js"></script>
 	<script src="angular-app/hotel-rating/hotel-rating-directive.js"></script>
+	<script src="angular-app/register/register-controller.js"></script>
+	<script src="angular-app/navigation-directive/navigation-directive.js"></script>
+	<script src="angular-app/login/login-controller.js"></script>
+	<script src="angular-app/auth/auth-factory.js"></script>
+	<script src="angular-app/auth/auth-interceptor.js"></script>
 </body>
 
 </html>

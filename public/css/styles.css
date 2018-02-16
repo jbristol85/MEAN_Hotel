@@ -1,11 +1,20 @@
-html{
-	position: relative;
-	min-height:100%;
-	
-}
-body{
-	margin-bottom: 90px;
-}
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 90px;
+  }
+  body > .container {
+    padding-top: 60px;
+  }
+  .padded {
+    padding-top: 30px
+  }
+
 .footer{
 	position:absolute;
 	bottom:0;

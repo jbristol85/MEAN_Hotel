@@ -3,14 +3,15 @@ var router = express.Router();
 
 var ctrlHotels = require('../controllers/hotels.controllers.js');
 var ctrlReviews = require('../controllers/reviews.controllers.js');
+var ctrlUsers = require('../controllers/users.controllers.js');
 
 router
 	.route('/hotels')
-	.get(ctrlHotels.hotelsGetAll) // mapped a controller to the route
+	.get(ctrlHotels.hotelsGetAll) // ctrlUsers.authenticate,// mapped a controller to the route
 	.post(ctrlHotels.hotelsAddOne); // can chain methods 
 
 router
-	.route('/hotels/:hotelId')
+	.route('/hotel/:hotelId')
 	.get(ctrlHotels.hotelsGetOne)
 	.put(ctrlHotels.hotelsUpdateOne)
 	.delete(ctrlHotels.hotelsDeleteOne);
@@ -22,15 +23,24 @@ router
 
 // Review Routes
 router
-	.route('/hotels/:hotelId/reviews')
+	.route('/hotel/:hotelId/reviews')
 	.get(ctrlReviews.reviewsGetAll)  // mapped a controller to the route
-	.post(ctrlReviews.reviewsAddOne);
+	.post(ctrlUsers.authenticate, ctrlReviews.reviewsAddOne);
 	
 router
-	.route('/hotels/:hotelId/reviews/:reviewId')
+	.route('/hotel/:hotelId/reviews/:reviewId')
 	.get(ctrlReviews.reviewsGetOne)
 	.put(ctrlReviews.reviewsUpdateOne)
 	.delete(ctrlReviews.reviewsDeleteOne);
+	
+	//Authentication
+router
+	.route('/users/register')
+	.post(ctrlUsers.register);
+	
+router
+	.route('/users/login')
+	.post(ctrlUsers.login);
 	
 	
 	module.exports = router;

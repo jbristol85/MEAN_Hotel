@@ -42,7 +42,9 @@ var runGeoQuery = function(req, res){
 module.exports.hotelsGetAll = function(req, res){
 	// var db = dbconn.get();
 	// var collection = db.collection('hotels');
-	
+	console.log("Requested by: " + req.user);
+	console.log('GET the hotels');
+	console.log(req.query);
 	
 	var offset = 0;
 	var count = 5;
