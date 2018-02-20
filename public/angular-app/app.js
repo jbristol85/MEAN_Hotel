@@ -1,4 +1,4 @@
-/* global HotelsController HotelController RegisterController angular */
+/* global HotelsController HotelController RegisterController angular */ 
 angular.module('meanhotel', ['ngRoute', 'angular-jwt']).config(config).run(run);
 
 
@@ -48,8 +48,8 @@ function config($httpProvider, $routeProvider){
 }
 
 function run($rootScope, $location, $window, AuthFactory){
-	$rootScope.$on('routeChangeStart', function(event, nextRoute, currentRoute){
-		if(nextRoute.access !== undefined && !nextRoute.access.restricted && !$window.sessionStorage.token && !AuthFactory.isLoggedIn) {
+	$rootScope.$on("$routeChangeStart", function(event, nextRoute, currentRoute){
+		if(nextRoute.access !== undefined && nextRoute.access.restricted && !$window.sessionStorage.token && !AuthFactory.isLoggedIn) {
 			event.preventDefault();
 			$location.path('/');
 		}
